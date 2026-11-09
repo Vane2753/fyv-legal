@@ -396,7 +396,8 @@ var SERVICES = [
   // Procesos judiciales
   { id: 'conciliacion', c: 'proc', n: 'Conciliación extrajudicial (solicitud y audiencias)', u: 'conciliación', d: 'Incluye la solicitud y el acompañamiento a las audiencias.', v: [
     { l: 'Honorario fijo', f: 1 },
-    { l: 'Fijo + 5 % de lo conciliado', f: 1, litis: 0.05 }] },
+    { l: 'Esquema mixto: 1 SMLMV + 5 % de lo conciliado', f: 1, litis: 0.05 },
+    { l: 'Esquema fijo puro: 2 SMLMV + 10 % de lo conciliado', f: 2, litis: 0.10 }] },
   { id: 'verbal', c: 'proc', n: 'Proceso verbal declarativo', u: 'proceso', d: 'Valor base; sin tope según la cuantía y complejidad. No incluye gastos procesales, notificaciones, pólizas ni peritos.', v: [
     { l: 'Fijo (base desde 10 SMLMV)', f: 10 },
     { l: 'Mixto 10 %: 5 SMLMV + 10 % de lo recuperado', f: 5, litis: 0.10 },
