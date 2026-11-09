@@ -408,7 +408,7 @@ var SERVICES = [
     { l: 'Con título propio, fijo (base desde 10 SMLMV)', f: 10 },
     { l: 'Con título propio, mixto: 5 SMLMV + 30 % de lo recaudado', f: 5, litis: 0.30, p: 1 },
     { l: 'Con título propio, mixto: 5 SMLMV + 35 % de lo recaudado', f: 5, litis: 0.35, p: 1 },
-    { l: 'A continuación del declarativo, fijo', f: 5 },
+    { l: 'A continuación del declarativo, fijo', f: 10 },
     { l: 'A continuación del declarativo, mixto 30 %: 5 SMLMV + 5 % de lo recaudado', f: 5, litis: 0.05 }] },
   { id: 'ejec_hip', c: 'proc', n: 'Proceso ejecutivo hipotecario o prendario', u: 'proceso', p: 1, v: [
     { l: 'Hasta 150 SMLMV', f: 5, p: 1 }, { l: 'Más de 150 SMLMV', f: 8, p: 1 }] },
@@ -844,7 +844,7 @@ function renderDoc() {
       if (!c.litis) return;
       h += '<tr><td>' + esc(c.s.n) + '<small>' + num(c.litis * 100) + ' % sobre lo efectivamente recuperado, por sentencia, conciliación o acuerdo de pago. Estimado sobre pretensiones de ' + money(c.pret) + '.</small></td><td class="r">' + money(c.exito) + '</td></tr>';
     });
-    h += '</tbody></table></div><p class="fine" style="margin:6px 0 0">La cuota litis se causa con la sentencia favorable, el acuerdo conciliatorio o el acuerdo de pago, sobre el valor reconocido. Puede pagarse en ese momento o acordarse que una parte se pague con el recaudo del proceso ejecutivo. El porcentaje de la conciliación solo aplica si el caso termina en esa etapa. Las agencias en derecho reconocidas en el proceso corresponden al abogado. Si el cliente revoca el poder o transige sin intervención del abogado, se causa la cuota litis sobre el valor de las pretensiones.</p></div>';
+    h += '</tbody></table></div><p class="fine" style="margin:6px 0 0">La cuota litis se causa con la sentencia favorable, el acuerdo conciliatorio o el acuerdo de pago, sobre el valor reconocido. Puede pagarse en ese momento, en cuotas, o acordarse que una parte se pague con la sentencia y el resto con el recaudo del proceso ejecutivo. El porcentaje de la conciliación solo aplica si el caso termina en esa etapa. Las agencias en derecho reconocidas en el proceso corresponden al abogado. Si el cliente revoca el poder o transige sin intervención del abogado, se causa la cuota litis sobre el valor de las pretensiones.</p></div>';
   }
   if (!t.lines.length && !t.mem) h += '<div class="empty">La cotización aparece aquí a medida que agregas la membresía o los servicios.</div>';
 
